@@ -2,6 +2,6 @@
 .settings/
 .project/
 tmp/
-test-results/
+test-result/
 eclipse/
 modules/
