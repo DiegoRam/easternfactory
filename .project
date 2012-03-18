@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>easternfactory</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.playframework.playclipse.playNature</nature>
+	</natures>
+	<linkedResources><link><name>secure</name><type>2</type><location>/usr/share/play/play-1.2.3/modules/secure/app</location></link>
+<link><name>conf/secure</name><type>2</type><location>/usr/share/play/play-1.2.3/modules/secure/conf</location></link>
+<link><name>public/secure</name><type>2</type><location>/usr/share/play/play-1.2.3/modules/secure/public</location></link>
+<link><name>morphia-1.2.4</name><type>2</type><location>/home/diego/workspace/easternfactory/modules/morphia-1.2.4/app</location></link>
+<link><name>conf/morphia-1.2.4</name><type>2</type><location>/home/diego/workspace/easternfactory/modules/morphia-1.2.4/conf</location></link>
+<link><name>openshift-0.1.0</name><type>2</type><location>/usr/share/play/play-1.2.3/modules/openshift-0.1.0/app</location></link>
+<link><name>conf/openshift-0.1.0</name><type>2</type><location>/usr/share/play/play-1.2.3/modules/openshift-0.1.0/conf</location></link>
+</linkedResources>
+</projectDescription>
