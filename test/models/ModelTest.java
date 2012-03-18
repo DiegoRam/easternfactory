@@ -30,7 +30,15 @@ public class ModelTest extends UnitTest {
 		order.save();
 		
 		Detail det = new Detail(COLOR.BLACK,SIZE.MEDIUM,2);
+		Detail det2 = new Detail(COLOR.BLACK,SIZE.SMALL,3);
+
 		order.addDetail(det);
+		order.addDetail(det2);
+		order.save();
+		
+		Payment pay = new Payment(new Date(System.currentTimeMillis()), 58.84F);
+		order.addPayment(pay);
+		assertTrue(order.payments.size()>0);
 		order.save();
 		
 	}

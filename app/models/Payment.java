@@ -12,4 +12,9 @@ public class Payment  {
 
 		public Date date ;
 		public float amount ;
+		
+		public Payment(Date date , float amount){
+			this.date = date ;
+			this.amount = amount ;
+		}
 }

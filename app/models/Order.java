@@ -38,5 +38,13 @@ public class Order extends Model {
 	public boolean removeDetail(Detail det){
 		 return this.detail.remove(det);
 	}
+	
+	public void addPayment(Payment pay){
+		this.payments.add(pay);
+	}
+	
+	public List<Payment> getPayments(){
+		return this.payments ;
+	}
 
 }
