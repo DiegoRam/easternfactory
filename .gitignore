@@ -1,6 +1,6 @@
 .classpath
 .settings/
-.project/
+.project
 tmp/
 test-result/
 eclipse/
