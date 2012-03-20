@@ -1,4 +1,37 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+#{set title:'Lista de pendientes' /}
 
-#{welcome /}
+
+<div class="container">
+<div class = "row "> 
+<div class ="span8">
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#course" data-toggle="tab">En Curso</a></li>
+	<li><a href="#client" data-toggle="tab">Clientes</a></li>
+	<li><a href="#neworder" data-toggle="tab">Nuevos pedidos</a></li>
+	<li><a href="#stats" data-toggle="tab">Stats</a></li>
+</ul>
+
+<div class = "tab-content">
+	<div class = "tab-pane active" id = "course">
+	<p>Lista de pendientes</p>
+	</div>
+
+	<div class = "tab-pane" id = "client">
+	
+		#{formClient/}
+	</div>
+	
+	<div class = "tab-pane" id = "neworder">
+		#{formOrder clients:clients /}
+	</div>
+	
+	<div class = "tab-pane" id = "stats">
+	<p>stats</p>
+	</div>
+	
+</div>
+</div>
+<div class = "span4"></diV>
+</div>
+</div>

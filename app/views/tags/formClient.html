@@ -1,0 +1,27 @@
+<form action = "@Application.saveClient()" class = "form-vertical" >
+
+<fieldset>
+<legend> Agregar  </legend>
+			#{if flash.success}
+    				<p class="alert-success">${flash.success}</p>
+			#{/if}
+			#{if flash.error}
+					<p class="alert-error">${flash.error}</p>
+			#{/if}
+
+            <label for="firstname">Nombre</label>
+            <div class="input">
+              <input type="text" size="50" name="firstname" class="input-large" value = "${params.firstname}">
+            </div>
+            <label for="lastname">Apellido</label>
+            <div class="input">
+              <input type="text" size="50" name="lastname" class="input-large" value = "${params.lastname}">
+            </div>
+
+	      <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Guardar</button>&nbsp;<button class="btn" type="reset">Cancelar</button>
+          </div>
+	    
+</fieldset>
+
+</form>

@@ -13,5 +13,9 @@ public class Client extends Model {
 		this.firstname = firstname ;
 		this.lastname = lastname ;
 	}
+	
+	public String toString(){
+		return firstname + " "+ lastname ;
+	}
 
 }
