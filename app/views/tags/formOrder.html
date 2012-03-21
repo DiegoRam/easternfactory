@@ -1,5 +1,5 @@
-<form action = "@Application.saveOrder()" class = "form-vertical" >
 
+#{form @Application.saveOrder()}
 <fieldset>
 <legend> Agregar  </legend>
 			#{if flash.success}
@@ -9,39 +9,43 @@
 					<p class="alert-error">${flash.error}</p>
 			#{/if}
 			
-			#{select 'client', items:_clients, valueProperty:'id', 
-			labelProperty:'Clientes', value:0, class:'test', id:'selectClient' /}
+			#{select 'clientId', items:_clients, valueProperty:'id', 
+			labelProperty:'Clientes', value:0, class:'test', id:'client' /}
 			<label for="dp2">Fecha propuesta</label>
 			<div class="input">
 				<div class="inline-inputs">
-					<input type="text" class="span2"  data-date-format="dd/mm/yyyy" id = "dp2" value="20/03/2012" /> 
+					<input type="text" class="span2"  data-date-format="dd/mm/yyyy" id = "dp2" value="${new Date().format('dd/MM/yyyy')}" name = "order.date" />
 				</div>
 			</div>
 		    <label for="dp2">Fecha de Entrega</label>
 			<div class="input">
-					<input type="text" class="span2"  data-date-format="dd/mm/yyyy" id = "dp2" value="20/03/2012" /> 
+					<input type="text" class="span2"  data-date-format="dd/mm/yyyy" id = "dp3" value="${new Date().format('dd/MM/yyyy')}" name = "order.deliveryDate"/> 
 			</div>
 			<div class = well>
-			<div id = "detailList">
-			<div id="item_0" class="item">
-						<div class = "span1">
-							<label for="color_0">Color</label>
-							<input type="text" id="color_0" name="order.detail[0].color" class="span1" />
+			<legend>Detalle</legend>
+						<fieldset>
+					<div id = "detailList">
+						<div id="item_0" class="item">
+							<div class = "row">
+								<div class = "span1">
+									<label for="color_0">Color</label>
+									<input type="text" id="color_0" name="order.detail[0].color" class="span1"  />
+								</div>
+								<div class = "span2">
+									<label for="size_0">Tamaño</label>
+									<input type="text" id="size_0" name="order.detail[0].size" class="span2" />
+								</div>
+								<div class = "span1">
+									<label for="color_0">Cantidad</label>
+									<input type="text" id="number_0" name="order.detail[0].number" class="span1"  />
+								</div>
+							</div>	
+						
 						</div>
-						<div class = "span2">
-							<label for="size_0">Tamaño</label>
-							<input type="text" id="size_0" name="order.detail[0].size" class="span2" />
-						</div>
-						<div class = "span1">
-							<label for="color_0">Cantidad</label>
-							<input type="text" id="number_0" name="order.detail[0].number" class="span1" />
-						</div>
-						<div class = "span2">
-							<a href="#" id="addDetail" class="btn btn-info"><i class="icon-plus icon-white"></i> Agregar otro</a>
-						</div>
-			</div>
-			</div>
-			</div>
+					</div>
+				</fieldset>
+				</div>
+				<a href="#" id="addDetail" class="btn btn-info"><i class="icon-plus icon-white"></i> Agregar otro</a>
    				
 	      <div class="form-actions">
             <button class="btn btn-primary" type="submit">Guardar</button>&nbsp;<button class="btn" type="reset">Cancelar</button>
@@ -49,23 +53,23 @@
 	    
 </fieldset>
 
-</form>
-
+#{/form}
 <div id="detailTemplate" class="hidden">
 	<div id="item_$ID" class="item">
-				<div class="inline-inputs">
-						<div class = "left">
-							<label for="color_$ID">Color</label>
-							<input type="text" id="color_$ID" name="order.detail[$ID].color" class="span1" />
-						</div>
-						<div class = "left">
-							<label for="size_$ID">Tamaño</label>
-							<input type="text" id="size_$ID" name="order.detail[$ID].size" class="span2" />
-						</div>
-						<div class = "left">
-							<label for="number_$ID">Cantidad</label>
-							<input type="text" id="number_0" name="order.detail[$ID].number" class="span1" />
-						</div>
-				</div>
+	<div class = "row">
+	
+								<div class = "span1">
+									<label for="color_$ID">Color</label>
+									<input type="text" id="color_$ID" name="order.detail[$ID].color" class="span1" />
+								</div>
+								<div class = "span2">
+									<label for="size_$ID">Tamaño</label>
+									<input type="text" id="size_$ID" name="order.detail[$ID].size" class="span2" />
+								</div>
+								<div class = "span1">
+									<label for="color_$ID">Cantidad</label>
+									<input type="text" id="number_$ID" name="order.detail[$ID].number" class="span1" />
+								</div>
+	</div>
 	</div>
 </div>
