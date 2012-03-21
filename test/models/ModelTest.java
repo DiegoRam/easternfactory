@@ -29,8 +29,8 @@ public class ModelTest extends UnitTest {
 		assertNotNull(order);
 		order.save();
 		
-		Detail det = new Detail(COLOR.BLACK,SIZE.MEDIUM,2);
-		Detail det2 = new Detail(COLOR.BLACK,SIZE.SMALL,3);
+		Detail det = new Detail(1,2,2);
+		Detail det2 = new Detail(1,2,3);
 
 		order.addDetail(det);
 		order.addDetail(det2);
