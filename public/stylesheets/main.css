@@ -20,29 +20,34 @@ form fieldset { margin-top:10px }
 
 .remove { float:left; margin-top:35px }
 
-.talks { list-style:none; margin:0 }
-.talks li { margin-bottom:15px }
-.talks li { font-weight:bold }
-.talks li span { font-style:italic; font-weight:normal; font-size:12px }
-
-.suggestions { float:left; clear:left; margin-left:13px }
-.suggestions .suggContainer { float:left; clear:left; width:100% }
-.suggestions .suggestion { float:left; width:220px; min-height:100px; border:1px solid #DDD; margin:5px 10px 5px 0 }
-.suggestions .suggestion.topDate { background:#F1F1F1 }
-.suggestions .suggestion .title { display:block; font-weight:bold; text-align:center; padding:5px 0; border-bottom:1px solid #DDD }
-.suggestions .suggestion .title a { font-weight:normal; margin-right:5px; float:right }
-.suggestions .suggestion .option { border-top:1px solid #DDD; text-align:center; padding:5px 0 }
-.suggestions .suggestion.proposeOther { text-align:center; padding-top:40px; min-height:65px }
-
-.avatar { float:left; width:30px; height:30px; border:2px solid #DDD }
-.avatarText { margin:8px 0 0 5px; float:left }
 
 .view .control-group { clear:left; float:left; margin:10px 0 }
 
-#rsvp { float:right;  }
 
 .rightBox { float:right; border:3px solid #DDD; padding:10px 20px; margin-top:20px }
 
 .nav-tabs { clear:left; float:left; width:710px; margin-top:20px }
 .tab-content { float:left; width:710px; min-height:180px }
+
+
+img.black
+{
+width:66px;
+height:64px;
+background:url(/public/images/eggsprite.jpg) -98px -175px;
+}
+
+img.white
+{
+width:66px;
+height:64px;
+background:url(/public/images/eggsprite.jpg) -180px -90px;
+}
+
+img.mixed
+{
+width:66px;
+height:64px;
+background:url(/public/images/eggsprite.jpg) -20px -175px;
+}
 
