@@ -1,7 +1,0 @@
-# Application dependencies
-
-require:
-    - play
-    - play -> openshift 0.1.0
-    - play -> morphia 1.2.4
-    - play -> secure
