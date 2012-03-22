@@ -1,4 +1,4 @@
-<table class = "table table-bordered">
+<table class = "table table-striped">
 	<thead>
 		<tr>
 			<td> Cliente </td>
@@ -11,20 +11,16 @@
 	</thead>
 	<tbody>
 		#{list items:_orders, as:'order'}
-				<tr rowspan = "${order.viewDetail().size()}" >
-	   		 		<td>${order.client}</td>
-	   	 			<td>${order.date.format("dd/MM/yyyy")} </td>
+				<tr>
+	   		 		<td rowspan = "${order.viewDetail().size()}" >${order.client}</td>
+	   	 			<td rowspan = "${order.viewDetail().size()}" >${order.date.format("dd/MM/yyyy")} </td>
 	   	 			<td>${order.viewDetail()[0]}</td>
 	   	 			<td>${order.getDebt()}</td>
 	   	 			<td></td>
 	   	 			#{if order.viewDetail().size() > 1}
 					#{list items:1..order.viewDetail().size()-1, as : 'i'}	
 						<tr>
-			   		 		<td></td>
-			   	 			<td> </td>
 			   	 			<td>${order.viewDetail()[i]}</td>
-			   	 			<td></td>
-			   	 			<td></td>
 		   	 			</tr>
 		   	 		#{/list}
 	   	 			#{/if}
