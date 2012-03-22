@@ -2,8 +2,6 @@ package models;
 
 import java.util.Date;
 
-import models.Detail.COLOR;
-import models.Detail.SIZE;
 
 import org.junit.Test;
 

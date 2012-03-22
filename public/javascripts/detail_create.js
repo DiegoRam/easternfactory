@@ -15,7 +15,7 @@ $(function() {
 	$('#addDetail').click(function(e) {
 		e.preventDefault();
 		
-		var removeLink = '<a href="javascript:;" class="remove icon-remove" onclick="removeDetail(' + (currentDetail - 1) + ')"></a>' ;
+		var removeLink = '<label>&nbsp</label> <a href="javascript:;" class="remove icon-remove" onclick="removeDetail(' + (currentDetail - 1) + ')"></a>' ;
 		$('#detailList .item .row:last').append(removeLink)
 		var html = $('#detailTemplate').clone().html().replace(/\$ID/g, currentDetail);
 		$('#detailList .item:last').after(html);
