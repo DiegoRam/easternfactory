@@ -91,13 +91,13 @@ public class Order extends Model {
 			for (Detail det : detail) {
 				switch (det.color) {
 				case 1:
-					total = total + 12;
+					total = total + (12 * det.number);
 					break;
 				case 2:
-					total = total + 25;
+					total = total + (25 * det.number);
 					break;
 				case 3:
-					total = total + 35;
+					total = total + (35 * det.number);
 					break;
 				default:
 					break;

@@ -7,8 +7,6 @@ import play.modules.morphia.Model;
 @Embedded
 public class Detail {
 
-	public enum COLOR {BLACK,WHITE,BOTH}
-	public enum SIZE {SMALL,MEDIUM,LARGE}
 	public int color ;
 	public int size ;
 	public int number ;
