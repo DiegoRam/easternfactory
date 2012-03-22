@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 public class Application extends Controller {
 
 	private static final SimpleDateFormat SDF = new SimpleDateFormat(
-			"dd-MM-yyyy");
+			"dd/MM/yyyy");
 
 	public static void index() {
 
@@ -36,7 +36,7 @@ public class Application extends Controller {
 			@Required String orderDate, @Required String deliveryDate,
 			@Required Order order) {
 
-		if (validation.hasErrors()) {
+		if (!validation.hasErrors()) {
 
 			order.client = Client.findById(clientId);
 			try {
