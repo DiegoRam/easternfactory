@@ -20,15 +20,21 @@ public class Application extends Controller {
 	public static void index() {
 
 		List<Client> clients = Client.findAll();
-		Order order = new Order(null, null);
-		render(clients, order);
+		List<Order> orders = Order.findAll();
+		render(clients, orders);
 	}
 
 	public static void stats() {
 
 	}
 
-	public static void saveClient(String firtsname, String lastname) {
+	public static void saveClient(@Required String firstname, @Required String lastname) {
+		
+		
+		Client cl = new Client(firstname, lastname);
+		cl.save();
+		flash.success("Vamos Rusa!!!");
+		index();
 
 	}
 

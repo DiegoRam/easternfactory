@@ -27,13 +27,21 @@
 					<div id = "detailList">
 						<div id="item_0" class="item">
 							<div class = "row">
-								<div class = "span1">
-									<label for="color_0">Color</label>
-									<input type="text" id="color_0" name="order.detail[0].color" class="span1"  />
+								<div class = "span3">
+									<label for="selectColor_0">Color</label>
+									#{select 'order.detail[0].color' , value:1 , id : 'selectColor_0'}
+										#{option 1} NEGRO  #{/option}
+										#{option 2} BLANCO  #{/option}
+										#{option 3} MIXTO  #{/option}
+									#{/select}
 								</div>
-								<div class = "span2">
-									<label for="size_0">Tamaño</label>
-									<input type="text" id="size_0" name="order.detail[0].size" class="span2" />
+								<div class = "span3">
+									<label for="selectSize_0">Tamaño</label>
+									#{select 'order.detail[0].size' , value:1 , id : 'selectSize_0'}
+										#{option 1} CHICO  #{/option}
+										#{option 2} MEDIANO  #{/option}
+										#{option 3} GRANDE  #{/option}
+									#{/select}
 								</div>
 								<div class = "span1">
 									<label for="color_0">Cantidad</label>
@@ -58,13 +66,21 @@
 	<div id="item_$ID" class="item">
 	<div class = "row">
 	
-								<div class = "span1">
-									<label for="color_$ID">Color</label>
-									<input type="text" id="color_$ID" name="order.detail[$ID].color" class="span1" />
+								<div class = "span3">
+									<label for="selectColor_$ID">Color</label>
+									#{select 'order.detail[$ID].color' , value:1 , id : 'selectColor_$ID'}
+										#{option 1} NEGRO  #{/option}
+										#{option 2} BLANCO  #{/option}
+										#{option 3} MIXTO  #{/option}
+									#{/select}
 								</div>
-								<div class = "span2">
-									<label for="size_$ID">Tamaño</label>
-									<input type="text" id="size_$ID" name="order.detail[$ID].size" class="span2" />
+								<div class = "span3">
+									<label for="selectSize_$ID">Tamaño</label>
+									#{select 'order.detail[$ID].size' , value:1 , id : 'selectSize_$ID'}
+										#{option 1} CHICO  #{/option}
+										#{option 2} MEDIANO  #{/option}
+										#{option 3} GRANDE  #{/option}
+									#{/select}
 								</div>
 								<div class = "span1">
 									<label for="color_$ID">Cantidad</label>

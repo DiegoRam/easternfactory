@@ -1,0 +1,35 @@
+<table class = "table table-bordered">
+	<thead>
+		<tr>
+			<td> Cliente </td>
+			<td> Fecha de Entrega </td>
+			<td> Cantidades </td>
+			<td> Monto Adeudado </td>
+			<td> Detalle </td>
+			
+		</tr>
+	</thead>
+	<tbody>
+		#{list items:_orders, as:'order'}
+				<tr rowspan = "${order.viewDetail().size()}" >
+	   		 		<td>${order.client}</td>
+	   	 			<td>${order.date.format("dd/MM/yyyy")} </td>
+	   	 			<td>${order.viewDetail()[0]}</td>
+	   	 			<td>${order.getDebt()}</td>
+	   	 			<td></td>
+	   	 			#{if order.viewDetail().size() > 1}
+					#{list items:1..order.viewDetail().size()-1, as : 'i'}	
+						<tr>
+			   		 		<td></td>
+			   	 			<td> </td>
+			   	 			<td>${order.viewDetail()[i]}</td>
+			   	 			<td></td>
+			   	 			<td></td>
+		   	 			</tr>
+		   	 		#{/list}
+	   	 			#{/if}
+				</tr>
+		#{/list}
+		
+	</tbody>
+</table>
