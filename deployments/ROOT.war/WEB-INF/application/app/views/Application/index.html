@@ -1,0 +1,57 @@
+#{extends 'main.html' /}
+#{set title:'Lista de pendientes' /}
+
+
+<div class="container">
+<div class = "row "> 
+<div class ="span8">
+<div>
+<h2>Gestion de Pedidos de "Guevos"</h2>
+</div>
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#course" data-toggle="tab">En Curso</a></li>
+	<li><a href="#client" data-toggle="tab">Clientes</a></li>
+	<li><a href="#neworder" data-toggle="tab">Nuevos pedidos</a></li>
+</ul>
+
+<div class = "tab-content">
+	<div class = "tab-pane active" id = "course">
+	#{listOrder orders:orders/}
+	</div>
+
+	<div class = "tab-pane" id = "client">
+	
+		#{formClient/}
+	</div>
+	
+	<div class = "tab-pane" id = "neworder">
+		#{formOrder clients:clients /}
+	</div>
+		
+</div>
+</div>
+<div class = "span4">
+	<div class = "rightBox">
+		<h4><strong>Stats</strong></h4>
+		<ul>
+		<li><img class="black" src="/public/images/img_trans.gif" width="1" height="1" />
+		<p>Chicos 9/12</p>
+		<p>Medianos 9/12</p>
+		<p>Grandes 9/12</p>
+		</li>
+		<li><img class="white" src="/public/images/img_trans.gif" width="1" height="1" />
+		<p>Chicos 9/12</p>
+		<p>Medianos 9/12</p>
+		<p>Grandes 9/12</p>
+		</li>
+		<li><img class="mixed" src="/public/images/img_trans.gif" width="1" height="1" />
+		<p>Chicos 9/12</p>
+		<p>Medianos 9/12</p>
+		<p>Grandes 9/12</p>
+		</li>
+		</ul>
+		
+	</div>
+</div>
+</diV>
+</div>

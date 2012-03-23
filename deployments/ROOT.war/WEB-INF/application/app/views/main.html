@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>#{get 'title' /}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../../public/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../../public/stylesheets/main.css" rel="stylesheet">
+
+    <link href="../../public/bootstrap/css/datepicker.css" rel="stylesheet">
+    
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.ico'}">
+
+	<script src="../../public/javascripts/jquery-1.7.1.min.js" type="text/javascript" charset="UTF-8"></script>  
+	<script src="../../public/bootstrap/js/bootstrap.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="../../public/bootstrap/js/bootstrap-datepicker.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="../../public/javascripts/detail_create.js" type="text/javascript" charset="UTF-8"></script>
+
+  </head>
+
+  <body>
+      <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <img src="/public/images/mainegg.png" alt="Estearn Factory" height="42" width="42" />
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="@{Application.index()}">Ukranian Eastern Factory</a>
+          <div class="nav-collapse">
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    
+  
+        #{doLayout /}
+	
+		<script>
+		$(function(){
+			window.prettyPrint && prettyPrint();
+			$('#dp1').datepicker({
+				format: 'dd-mm-yyyy'
+			});
+			$('#dp2').datepicker();
+			$('#dp3').datepicker();		
+		});
+		</script>
+<div class="modal hide fade" id="showDetail" >
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Detalle Pedido</h3>
+  </div>
+  <div class="modal-body">
+    <p>Hola Rusia</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" data-dismiss="modal" class="btn">Cerrar</a>
+    <a href="#" class="btn btn-primary">Grabar</a>
+  </div>
+</div>
+
+        
+   </body>
+
+   <hr>
+   <footer>
+   <div class = "row" >
+   <div class = "span8" >
+     <p>@diegoram 2012</p>
+     </div>
+     <div class = "span4 offset5">
+     <img src = "/public/images/panda_working.jpg" />
+   </div>
+   </div>
+   </div>
+   </footer>
+   
+</html>
+
+

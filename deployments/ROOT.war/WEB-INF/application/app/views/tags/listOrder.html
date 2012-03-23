@@ -1,0 +1,31 @@
+<table class = "table table-striped">
+	<thead>
+		<tr>
+			<td> Cliente </td>
+			<td> Fecha de Entrega </td>
+			<td> Cantidades </td>
+			<td> Monto Adeudado </td>
+			<td> Detalle </td>
+			
+		</tr>
+	</thead>
+	<tbody>
+		#{list items:_orders, as:'order'}
+				<tr>
+	   		 		<td rowspan = "${order.viewDetail().size()}" >${order.client}</td>
+	   	 			<td rowspan = "${order.viewDetail().size()}" >${order.date.format("dd/MM/yyyy")} </td>
+	   	 			<td>${order.viewDetail()[0]}</td>
+	   	 			<td>${order.getDebt()}</td>
+	   	 			<td> <a href="#showDetail"  data-toggle="modal" class="icon-th-list "></a></td>
+	   	 			#{if order.viewDetail().size() > 1}
+					#{list items:1..order.viewDetail().size()-1, as : 'i'}	
+						<tr>
+			   	 			<td>${order.viewDetail()[i]}</td>
+		   	 			</tr>
+		   	 		#{/list}
+	   	 			#{/if}
+				</tr>
+		#{/list}
+		
+	</tbody>
+</table>
