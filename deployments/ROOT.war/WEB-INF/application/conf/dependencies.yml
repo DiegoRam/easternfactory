@@ -1,9 +1,0 @@
-# Application dependencies
-
-require:
-    - play
-    - play -> openshift 0.1.2
-    - play -> morphia 1.2.5a
-    - play -> secure
-    - joda-time -> joda-time 2.0
-
