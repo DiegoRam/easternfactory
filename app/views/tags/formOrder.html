@@ -27,17 +27,17 @@
 					<div id = "detailList">
 						<div id="item_0" class="item">
 							<div class = "row">
-								<div class = "span3">
+								<div class = "span2">
 									<label for="selectColor_0">Color</label>
-									#{select 'order.detail[0].color' , value:1 , id : 'selectColor_0'}
+									#{select 'order.detail[0].color' , value:1 , id : 'selectColor_0', class : "input-small"}
 										#{option 1} NEGRO  #{/option}
 										#{option 2} BLANCO  #{/option}
 										#{option 3} MIXTO  #{/option}
 									#{/select}
 								</div>
-								<div class = "span3">
+								<div class = "span2">
 									<label for="selectSize_0">Tamaño</label>
-									#{select 'order.detail[0].size' , value:1 , id : 'selectSize_0'}
+									#{select 'order.detail[0].size' , value:1 , id : 'selectSize_0', class : 'input-small'}
 										#{option 1} CHICO  #{/option}
 										#{option 2} MEDIANO  #{/option}
 										#{option 3} GRANDE  #{/option}
@@ -45,7 +45,7 @@
 								</div>
 								<div class = "span1">
 									<label for="color_0">Cantidad</label>
-									<input type="text" id="number_0" name="order.detail[0].number" class="span1"  />
+									<input type="text" id="number_0" name="order.detail[0].number" class = "input-mini" />
 								</div>
 							</div>	
 						</div>
@@ -66,17 +66,17 @@
 	<div id="item_$ID" class="item">
 	<div class = "row">
 	
-								<div class = "span3">
+								<div class = "span2">
 									<label for="selectColor_$ID">Color</label>
-									#{select 'order.detail[$ID].color' , value:1 , id : 'selectColor_$ID'}
+									#{select 'order.detail[$ID].color' , value:1 , id : 'selectColor_$ID', class : "input-small"}
 										#{option 1} NEGRO  #{/option}
 										#{option 2} BLANCO  #{/option}
 										#{option 3} MIXTO  #{/option}
 									#{/select}
 								</div>
-								<div class = "span3">
+								<div class = "span2">
 									<label for="selectSize_$ID">Tamaño</label>
-									#{select 'order.detail[$ID].size' , value:1 , id : 'selectSize_$ID'}
+									#{select 'order.detail[$ID].size' , value:1 , id : 'selectSize_$ID', class : "input-small"}
 										#{option 1} CHICO  #{/option}
 										#{option 2} MEDIANO  #{/option}
 										#{option 3} GRANDE  #{/option}
@@ -84,7 +84,7 @@
 								</div>
 								<div class = "span1">
 									<label for="color_$ID">Cantidad</label>
-									<input type="text" id="number_$ID" name="order.detail[$ID].number" class="span1" />
+									<input type="text" id="number_$ID" name="order.detail[$ID].number" class="input-mini" />
 								</div>
 	</div>
 	</div>

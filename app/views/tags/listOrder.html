@@ -16,7 +16,7 @@
 	   	 			<td rowspan = "${order.viewDetail().size()}" >${order.date.format("dd/MM/yyyy")} </td>
 	   	 			<td>${order.viewDetail()[0]}</td>
 	   	 			<td>${order.getDebt()}</td>
-	   	 			<td> <a href="#showDetail" data-toggle="modal" class="icon-th-list "></a></td>
+	   	 			<td> <a href="#showDetail"  data-toggle="modal" class="icon-th-list "></a></td>
 	   	 			#{if order.viewDetail().size() > 1}
 					#{list items:1..order.viewDetail().size()-1, as : 'i'}	
 						<tr>
